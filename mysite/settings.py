@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from blog import templates
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -55,7 +57,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\\Users\\ivayl\\PycharmProjects\\Djangogirls\\mysite'],
+        'DIRS': ['blog/templates'],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
