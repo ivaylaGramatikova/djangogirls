@@ -1,10 +1,10 @@
-<html>
+
     <head>
         <title>Ivayla's blog</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <p></p>
+        <p></p>
     </body>
 </html>
 
@@ -14,19 +14,28 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1><a href="/">Училищно разписание</a></h1>
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
             <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Часовете по приложен софтуер.</p>
         </div>
 
         <div>
             <p>published: 14.06.2014, 12:14</p>
             <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+            <p>Часовете по Български език и литература.</p>
         </div>
     </body>
 </html>
+          <div>
+    <h1><a href="/">Учителско разписание</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
